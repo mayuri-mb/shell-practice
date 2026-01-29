@@ -8,3 +8,5 @@ echo "sum is $SUM"
 
 fruits=("apple" "banana" "pomo")
 echo "fruits are: ${fruits[@]}"
+echo "first fruit is: ${fruit[0]}"
+
