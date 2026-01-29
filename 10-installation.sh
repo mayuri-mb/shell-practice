@@ -18,7 +18,6 @@ else
 fi 
 
 dnf install mysql -y
-
 if [ $? -ne 0 ]; then
     echo "installing mysql is failed"
     exit 1
@@ -27,7 +26,6 @@ else
 fi        
 
 dnf install nodejs -y
-
 if [ $? -ne 0 ]; then
     echo "installing nodejs is failed"
     exit 1
