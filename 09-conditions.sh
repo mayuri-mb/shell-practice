@@ -7,5 +7,5 @@ number=$1
 # -eq -> equal
 # -ne -> not equal
 if [ $number -gt 20 ]; then
-    echo "given number: $number is greater than 20"
+    echo "Given number: $number is greater than 20"
 fi 
