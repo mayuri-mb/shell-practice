@@ -2,7 +2,7 @@
 
 userid=$(id -u)
 logs_folder="/var/log/shell-script"
-logs_file="/var/log/shell-script/$0.log
+logs_file="/var/log/shell-script/$0.log"
 
 if [ $userid -ne 0 ]; then
    echo "Please run this script with root user access"
