@@ -1,15 +1,15 @@
 #!/bin/bash
 
 userid=$(id -u)
-logs-folder="/var/log/shell-script"
-logs-file="/var/log/shell-script/$0.log
+logs_folder="/var/log/shell-script"
+logs_file="/var/log/shell-script/$0.log
 
 if [ $userid -ne 0 ]; then
    echo "Please run this script with root user access"
    exit 1
 fi
 
-mkdir -p $logs-folder
+mkdir -p $logs_folder
 
 validate() {
     if [ $1 -ne 0 ]; then
@@ -19,11 +19,11 @@ validate() {
     fi      
 }
 
-dnf install nginx -y &>> $logs-file
+dnf install nginx -y &>> $logs_file
 validate $? "installing nginx"
 
-dnf install mysql -y  &>> $logs-file
+dnf install mysql -y  &>> $logs_file
 validate $? "installing mysql"
 
-dnf install nodejs -y &>> $logs-file
+dnf install nodejs -y &>> $logs_file
 validate $? "installing nodejs"
