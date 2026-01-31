@@ -1,5 +1,10 @@
 #!/bin/bash
 
+R="\e[31m"
+G="\e[32m"
+Y="\e[33m"
+N="\e[0m"
+
 userid=$(id -u)
 logs_folder="/var/logs/shell-script"
 logs_file="/var/logs/shell-script/$0.log"
