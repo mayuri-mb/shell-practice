@@ -1,5 +1,5 @@
 #!/bin/bash
-
+set -e #This will be checking for errors, if error, it will exit.
 R="\e[31m"
 G="\e[32m"
 Y="\e[33m"
@@ -31,7 +31,7 @@ do
     if [ $? -ne 0 ]; then
        echo "$package not installed, installing now"
        dnf install $package -y &>> $logs_file
-       validate $? "$package installing"
+      # validate $? "$package installing"
     else
        echo -e "$package already installed, $Y skipping $N"
     fi    
