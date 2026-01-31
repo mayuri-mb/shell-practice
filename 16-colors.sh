@@ -3,6 +3,6 @@
 R="\e[31m"
 G="\e[32m"
 Y="\e[33m"
-N="\e[0M"
+N="\e[0m"
 
-echo -e "$R Hello world, $N i am learning script"
+echo -e "$R Hello world, I am learning script $N"
