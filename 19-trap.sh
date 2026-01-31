@@ -1,4 +1,5 @@
 #!/bin/bash
+set -e
 
 echo " hello world"
 echoo " I am learning shell"
