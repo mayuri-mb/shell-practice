@@ -4,7 +4,7 @@ userid=$(id -u)
 logs_folder="/var/logs/shell-script"
 logs_file="/var/logs/shell-script/$0.log"
 
-if [ &userid -ne 0 ]; then
+if [ $userid -ne 0 ]; then
    echo "Please run this script with root access"
    exit 1
 fi
@@ -19,7 +19,7 @@ validate() {
     fi
 }
 
-if package in $@  # sudo sh 14-logs.sh nginx mysql nodejs
+for package in $@  # sudo sh 14-logs.sh nginx mysql nodejs
 do
   dnf install $package -y &>> $logs_file
   validate $? "$package installing"
