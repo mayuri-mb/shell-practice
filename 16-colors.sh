@@ -5,4 +5,4 @@ G="\e[32m"
 Y="\e[33m"
 N="\e[0M"
 
-ECHO "$R Hello world, $N i am learning script"
+echo "$R Hello world, $N i am learning script"
