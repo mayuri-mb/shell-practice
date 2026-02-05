@@ -20,7 +20,7 @@ while IFS= read -r filepath;
 do
   echo "deleting file: $filepath"
   rm -f $filepath 
-  echo "deleted file:$filepath"  | tee -a $logs_file
+  echo "deleted file:$filepath"  
 done <<< $files_to_delete
 
 
