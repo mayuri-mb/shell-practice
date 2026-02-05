@@ -6,7 +6,7 @@ Y="\e[33m"
 N="\e[34m"
 
 logs_dir="/home/ec2-user/app-logs"
-logs_file="$log_dir/$0.log"
+logs_file="$logs_dir/$0.log"
 
 if [ ! -d $logs_dir ]; then
    echo -e "$R $logs_dir does not exist $N"
@@ -20,7 +20,7 @@ while IFS= read -r filepath;
 do
   echo "deleting file: $filepath"
   rm -f $filepath 
-  echo "deleted file:$filepath"  
+  echo "deleted file:$filepath"   | tee -a $logs_file
 done <<< $files_to_delete
 
 
