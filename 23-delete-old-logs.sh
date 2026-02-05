@@ -3,7 +3,7 @@
 R="\e[31m"
 B="\e[32m"
 Y="\e[33m"
-N="\e[34"
+N="\e[34m"
 
 logs_dir="/home/ec2-user/app-logs"
 logs_file="$logd_dir/$0.log"
