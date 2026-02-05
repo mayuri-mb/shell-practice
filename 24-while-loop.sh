@@ -7,5 +7,5 @@ do
     echo "count is $count"
     sleep 1
     #increments the counter
-    ((count+++))
+    ((count+=1))
 done
