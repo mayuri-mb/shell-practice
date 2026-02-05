@@ -11,7 +11,7 @@ count=1
 # done
 
 
-while IFS= read -r line; 
+while IFS= read -r line
 do
 #process each line in here
   echo "$line"
