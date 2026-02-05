@@ -15,4 +15,4 @@ while IFS= read -r line;
 do
 #process each line in here
   echo "$line"
-done <./20.trap.sh #input which file to read
+done < ./20.trap.sh #input which file to read
