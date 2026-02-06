@@ -2,7 +2,7 @@
 
 user_id=$(id -u)
 logs_folder="/var/log/shell-practice"
-logs_file="$logs_dir/bkup.log"
+logs_file="$logs_folder/bkup.log"
 
 R="\e[31m"
 B="\e[32m"
