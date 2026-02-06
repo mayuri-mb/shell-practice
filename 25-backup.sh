@@ -48,10 +48,10 @@ files=$(find $SOURCE_DIR -name "*.log" -type f -mtime +$DAYS)
 log "Backup started"
 log "Source Directory: $SOURCE_DIR"
 log "Destination Directory: $DEST_DIR"
-log "Days $DAYS"
+log "Days: $DAYS"
 
 #Archive the files
-if [ -z $files ]; then
+if [ -z "$files" ]; then
   log "No files to archieve....$Y Skipping $N"
 fi
 
