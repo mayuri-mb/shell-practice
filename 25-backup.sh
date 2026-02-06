@@ -50,6 +50,14 @@ log "Source Directory: $SOURCE_DIR"
 log "Destination Directory: $DEST_DIR"
 log "Days $DAYS"
 
+#Archive the files
+if [ -z $files ]; then
+  log "No files to archieve....$Y Skipping $N"
+fi
+
+
+
+
 
 
 
