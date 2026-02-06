@@ -1,8 +1,8 @@
 #!/bin/bash
 
-userId=$(id -u)
-logs_folder=/var/log/shell-practice
-log_file=$logs_dir/bkup.log
+userid=$(id -u)
+logs_folder="/var/log/shell-practice"
+log_file="$logs_dir/bkup.log"
 
 R="\e[31m"
 B="\e[32m"
