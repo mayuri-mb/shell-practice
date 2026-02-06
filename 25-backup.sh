@@ -8,7 +8,7 @@ R="\e[31m"
 B="\e[32m"
 Y="\e[33m"
 N="\e[0m"
-SOUREC_DIR=$1
+SOURCE_DIR=$1
 DEST_DIR=$2
 DAYS=${3:-14} # 14 days is the default value, if the user not supplied
 
@@ -44,11 +44,11 @@ fi
 
 #Find the files
 
-files=$(find $source_dir -name "*.log" -type f -mtime +$DAYS)
+files=$(find $SOURCE_DIR -name "*.log" -type f -mtime +$DAYS)
 log "Backup started"
 log "Source Directory: $SOURCE_DIR"
 log "Destination Directory: $DEST_DIR"
-log "Days $DAYS
+log "Days $DAYS"
 
 
 
