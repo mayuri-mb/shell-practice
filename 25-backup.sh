@@ -1,6 +1,6 @@
 #!/bin/bash
 
-userid=$(id -u)
+user_id=$(id -u)
 logs_folder="/var/log/shell-practice"
 log_file="$logs_dir/bkup.log"
 
