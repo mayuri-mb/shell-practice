@@ -2,12 +2,12 @@
 
 user_id=$(id -u)
 logs_folder="/var/log/shell-practice"
-log_file="$logs_dir/bkup.log"
+logs_file="$logs_dir/bkup.log"
 
 R="\e[31m"
 B="\e[32m"
 Y="\e[33m"
-N="\e[34m"
+N="\e[0m"
 SOUREC_DIR=$1
 DEST_DIR=$2
 DAYS=${3:-14} # 14 days is the default value, if the user not supplied
@@ -28,15 +28,29 @@ if [ $# -lt 2 ]; then
    usage
 fi
 
+log () {
+    echo -e "$(date "+%Y-%m-%d %H:%M%S") | $1 "| tee -a $logs_file
+}
+
 if [ ! -d $SOURCE_DIR ]; then
-   echo -e "$R $SOURCE_DIR does not exist $N"
+   echo -e "$R Source directory: $SOURCE_DIR does not exist $N"
    exit 1
 fi
 
 if [ ! -d $DEST_DIR ]; then
-   echo -e "$R $DEST_DIR does not exist $N"
+   echo -e "$R Destination directory: $DEST_DIR does not exist $N"
    exit 1
 fi
+
+#Find the files
+
+files=$(find $source_dir -name "*.log" -type f -mtime +$DAYS)
+log "Backup started"
+log "Source Directory: $SOURCE_DIR"
+log "Destination Directory: $DEST_DIR"
+log "Days $DAYS
+
+
 
 
 
