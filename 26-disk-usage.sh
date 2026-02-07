@@ -25,5 +25,6 @@ do
   fi
 done <<< $DISK_USAGE  
 
+log 
 echo -e "$MESSAGE"
 
