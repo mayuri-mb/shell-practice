@@ -1,4 +1,6 @@
 #!/bin/bash
+logs_folder="/var/log/shell-practice"
+logs_file="$logs_folder/$0.log"
 
 R="\e[32m"
 G="\e[33m"
