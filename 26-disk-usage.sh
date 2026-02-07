@@ -20,10 +20,10 @@ do
   USAGE=$(echo $line | awk '{print $6}' | cut -d "%" -f1)
   PARTITION=$(echo $line | awk '{print $7}')
 
-  if [ "$USAGE" -ge "$USAGE_THRESHOLD" ]; then 
+  if [ "$USAGE" -ge "$USAGE_THRESHOLD" ]; then | tee -a $logs_file
       MESSAGE+="High Disk usage on $PARTITION:$USAGE \n"  # + means it appends data else it will override
   fi
-done <<< $DISK_USAGE  
+done <<< $DISK_USAGE   
 
 echo -e "$MESSAGE" | tee -a $logs_file
 
