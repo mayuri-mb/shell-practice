@@ -23,7 +23,7 @@ do
   if [ "$USAGE" -ge "$USAGE_THRESHOLD" ]; then 
       MESSAGE+="High Disk usage on $PARTITION:$USAGE \n"  # + means it appends data else it will override
   fi
-done <<< $DISK_USAGE   | tee -a $logs_file
+done <<< $DISK_USAGE   
 
 echo -e "$MESSAGE" | tee -a $logs_file
 
