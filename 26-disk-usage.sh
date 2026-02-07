@@ -9,7 +9,7 @@ N="\e[0m"
 MESSAGE=""
 
 log () {
-    echo -e "$(date "+%Y-%m-%d %H:%M:%S") | $1" | tee -a $logs_file
+    echo -e "$(date "+%Y-%m-%d %H:%M:%S") | $1" 
 }
 
 DISK_USAGE=$(df -hT | grep -v Filesystem)
@@ -20,11 +20,10 @@ do
   USAGE=$(echo $line | awk '{print $6}' | cut -d "%" -f1)
   PARTITION=$(echo $line | awk '{print $7}')
 
-  if [ "$USAGE" -ge "$USAGE_THRESHOLD" ]; then
-      MESSAGE+="High Disk usage on $PARTITION:$USAGE \n"  # + means it appends data else it will override
+  if [ "$USAGE" -ge "$USAGE_THRESHOLD" ]; then 
+      MESSAGE+="High Disk usage on $PARTITION:$USAGE \n"  | tee -a $logs_file # + means it appends data else it will override
   fi
 done <<< $DISK_USAGE  
 
-log 
 echo -e "$MESSAGE"
 
